@@ -1,6 +1,12 @@
 #define WIN32_LEAN_AND_MEAN
 #include <Windows.h>
 
+namespace platform{ class Window; }
+namespace gfx{
+	bool createSwapChain(IDXGIFactory4* a, platform::Window* b);
+	class Renderer;
+}
+
 namespace platform{
 
 	class Window{
@@ -23,13 +29,15 @@ namespace platform{
 		int width;
 		int height;
 	private:
+		friend bool gfx::createSwapChain(IDXGIFactory4* a, platform::Window* b);
+		friend class gfx::Renderer;
+
 		friend class Input;
 
 		double inverse_count_freq = 0.;
 		LARGE_INTEGER start_count;
 
 		HWND hwnd;
-		HDC hdc;
 		MSG msg;
 	};
 

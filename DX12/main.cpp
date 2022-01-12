@@ -1,9 +1,13 @@
 #include"stdafx.h"
 
 #include"Platform.h"
+#include"Renderer.h"
 
 int main(int argc, char* argv[]){
 	platform::Window window(500,500);
+	gfx::Renderer renderer;
+	if( !renderer.init(&window) ) renderer.shutdown();
+
 	window.show();
 
 	platform::Window::PollEvent w_event = platform::Window::PollEvent::POLL_EVENT_NONE;
@@ -15,10 +19,10 @@ int main(int argc, char* argv[]){
 			}
 		}
 
-
-		//renderer::
-
+		renderer.render();
 	}
 	
+	renderer.shutdown();
+
 	return 0;
 }

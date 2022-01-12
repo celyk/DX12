@@ -1,4 +1,7 @@
+#include"stdafx.h"
+
 #include "Platform.h"
+
 namespace platform{
 
     LRESULT CALLBACK msgProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam){
@@ -43,7 +46,8 @@ namespace platform{
             NULL);    // used with multiple windows, NULL
         
         //if( !hwnd ) printf("failed to create window!");
-        
+
+
         LARGE_INTEGER freq;
         QueryPerformanceFrequency(&freq);
         inverse_count_freq = double(1)/freq.QuadPart;
