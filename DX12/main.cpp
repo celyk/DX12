@@ -4,11 +4,16 @@
 #include"Renderer.h"
 
 int main(int argc, char* argv[]){
-	platform::Window window(500,500);
-	gfx::Renderer renderer;
-	if( !renderer.init(&window) ) renderer.shutdown();
-
+	platform::Window window(500, 500);
 	window.show();
+
+	gfx::Renderer renderer;
+	if( !renderer.init(&window) ){
+		printf("error");
+		renderer.shutdown();
+	}
+
+	printf("oh");
 
 	platform::Window::PollEvent w_event = platform::Window::PollEvent::POLL_EVENT_NONE;
 	while( w_event != platform::Window::PollEvent::POLL_EVENT_QUIT ){
@@ -19,7 +24,10 @@ int main(int argc, char* argv[]){
 			}
 		}
 
-		renderer.render();
+		printf("oh");
+		if( !renderer.render() ){
+			printf("error");
+		}
 	}
 	
 	renderer.shutdown();
