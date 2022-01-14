@@ -13,8 +13,6 @@ int main(int argc, char* argv[]){
 		renderer.shutdown();
 	}
 
-	printf("oh");
-
 	platform::Window::PollEvent w_event = platform::Window::PollEvent::POLL_EVENT_NONE;
 	while( w_event != platform::Window::PollEvent::POLL_EVENT_QUIT ){
 		while( window.poll(w_event) ){
@@ -24,7 +22,6 @@ int main(int argc, char* argv[]){
 			}
 		}
 
-		printf("oh");
 		if( !renderer.render() ){
 			printf("error");
 		}

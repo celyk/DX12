@@ -273,6 +273,8 @@ namespace gfx{
 		hr = swapChain->Present(0, 0);
 		if( FAILED(hr) )
 			return false;
+
+		return true;
 	}
 
 	void Renderer::shutdown(){
