@@ -1,6 +1,7 @@
 Currently working through boilerplate code for DirectX12, so mainly copyediting from tutorials.
 
-The code initializes DirectX12 with tripple buffering, then clears the screen pink on each frame.
+The code renders a triangle:
+![alt text](https://github.com/celyk/bridgeDEMO/blob/master/DX12/triangle.jpg?raw=true)
 
 
 Sources:
