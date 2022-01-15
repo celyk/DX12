@@ -1,7 +1,7 @@
 Currently working through boilerplate code for DirectX12, so mainly copyediting from tutorials.
 
 The code renders a triangle:
-![alt text](https://github.com/celyk/bridgeDEMO/blob/master/DX12/doc/triangle.jpg?raw=true)
+![alt text](https://github.com/celyk/DX12/blob/master/DX12/doc/triangle.jpg?raw=true)
 
 
 Sources:
