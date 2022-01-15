@@ -10,7 +10,7 @@ int main(int argc, char* argv[]){
 	gfx::Renderer renderer;
 	if( !renderer.init(&window) ){
 		printf("error");
-		renderer.shutdown();
+		return -1;
 	}
 
 	platform::Window::PollEvent w_event = platform::Window::PollEvent::POLL_EVENT_NONE;
@@ -22,11 +22,13 @@ int main(int argc, char* argv[]){
 			}
 		}
 
+		//printf("render");
 		if( !renderer.render() ){
 			printf("error");
+			return -1;
 		}
 	}
-	
+
 	renderer.shutdown();
 
 	return 0;
