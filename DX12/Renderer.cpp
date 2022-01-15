@@ -180,7 +180,7 @@ namespace gfx{
 		HRESULT hr;
 
 		int vBufferSize = vert.size()*sizeof(Vertex);
-		printf("%i",vBufferSize);
+
 		// create default heap
 		// default heap is memory on the GPU. Only the GPU has access to this memory
 		// To get data into this heap, we will have to upload the data using
